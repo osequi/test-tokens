@@ -6,7 +6,7 @@ const Home = () => {
 
   return (
     <ul>
-      <li>Tokens: {JSON.stringify(tokens)}</li>
+      <li>Tokens: {JSON.stringify(tokens())}</li>
       <li>Linear 10: {JSON.stringify(linear)}</li>
     </ul>
   );

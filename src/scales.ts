@@ -10,7 +10,6 @@ const linear = (value = 1): TToken => {
     id: {
       type: "scale",
       name: "linear",
-      props: value,
     },
     styles: [
       {
@@ -32,7 +31,6 @@ const modular = (value = 1): TToken => {
     id: {
       type: "scale",
       name: "modular",
-      props: value,
     },
     styles: [
       {
@@ -45,5 +43,5 @@ const modular = (value = 1): TToken => {
   };
 };
 
-const scales = (value: number): TToken[] => [linear(value), modular(value)];
+const scales = (value: number = 1): TToken[] => [linear(value), modular(value)];
 export { scales };

@@ -55,6 +55,6 @@ export type TToken = {
 /**
  * Collects all tokens.
  */
-const tokens: TToken[] = scales(1);
+const tokens = (props?: any): TToken[] => scales(props);
 
 export { tokens };
