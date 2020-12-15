@@ -1,9 +1,14 @@
+import { css, cx } from "@emotion/css";
 import { tokens } from "../tokens";
-import { scales } from "../scales";
 
 const Home = () => {
-  const linear = scales(10).find((item) => item.id.name === "linear");
-  const modular = scales(5).find((item) => item.id.name === "modular");
+  const linear = tokens(10).find(
+    (item) => item.id.type === "scale" && item.id.name === "linear"
+  );
+
+  const modular = tokens(5).find(
+    (item) => item.id.type === "scale" && item.id.name === "modular"
+  );
 
   return (
     <>
