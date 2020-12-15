@@ -45,5 +45,5 @@ const modular = (value = 1): TToken => {
   };
 };
 
-const scales: TToken[] = [linear(4), modular(3)];
+const scales = (value: number): TToken[] => [linear(value), modular(value)];
 export { scales };
