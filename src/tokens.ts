@@ -1,14 +1,15 @@
 import { TScaleId, TScaleNames, scales } from "./scales";
+import { TBreakpointId, TBreakpointNames, breakpoints } from "./breakpoints";
 
 /**
  * Defines the available design token id types.
  */
-export type TTokenIds = TScaleId;
+export type TTokenIds = TScaleId | TBreakpointId;
 
 /**
  * Defines the available design token id names.
  */
-export type TTokenNames = TScaleNames;
+export type TTokenNames = TScaleNames | TBreakpointNames;
 
 /**
  * Defines the states an element can be.
@@ -27,7 +28,6 @@ export type TTokenId = {
   type?: TTokenIds;
   name?: TTokenNames;
   state?: TState;
-  props?: any;
 };
 
 /**
@@ -55,6 +55,6 @@ export type TToken = {
 /**
  * Collects all tokens.
  */
-const tokens = (props?: any): TToken[] => scales(props);
+const tokens = (props?: any): TToken[] => [...scales(props), ...breakpoints];
 
 export { tokens };
